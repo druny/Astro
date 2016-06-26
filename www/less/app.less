@@ -1,0 +1,27 @@
+ul,
+ol {
+    li {
+        list-style-type: none;
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.front-page {
+    height: 100%;
+    max-height: 863px;
+    background: @bg-color url(../img/bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.menu {
+    &__content {
+        color: @nav-text-color;
+        li {
+            display: inline-block;
+        }
+    }
+}
