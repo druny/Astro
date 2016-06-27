@@ -323,7 +323,7 @@ h2,h3{page-break-after:avoid}
 .glyphicon-menu-up:before{content:"\e260"}
 *,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 html{font-size:10px;-webkit-tap-highlight-color:transparent}
-body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:15px;line-height:1.42857143;color:#3f5366}
+body{font-family:TexGyroHeros,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.42857143;color:#3f5366}
 button,input,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}
 a{color:#337ab7;text-decoration:none}
 a:focus,a:hover{color:#23527c;text-decoration:underline}
@@ -418,7 +418,6 @@ pre{padding:10px;margin:0 0 10.5px;font-size:14px;word-break:break-all;word-wrap
 .container,.container-fluid{margin-right:auto;margin-left:auto}
 pre code{padding:0;font-size:inherit;color:inherit;white-space:pre-wrap;border-radius:0}
 .container,.container-fluid{padding-left:15px;padding-right:15px}
-.close,legend{font-size:22.5px}
 .pre-scrollable{overflow-y:scroll}
 @media (min-width:992px){.container{width:970px}
 }
@@ -670,7 +669,7 @@ table td[class*=col-],table th[class*=col-]{position:static;float:none;display:t
 }
 fieldset,legend{padding:0;border:0}
 fieldset{margin:0;min-width:0}
-legend{width:100%;margin-bottom:21px;line-height:inherit;border-bottom:1px solid #e5e5e5}
+legend{width:100%;margin-bottom:21px;font-size:22.5px;line-height:inherit;border-bottom:1px solid #e5e5e5}
 label{display:inline-block;max-width:100%;margin-bottom:5px}
 input[type=search]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-appearance:none}
 input[type=checkbox],input[type=radio]{margin:4px 0 0;margin-top:1px\9;line-height:normal}
@@ -1277,8 +1276,8 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:focus,a.list-gro
 .well blockquote{border-color:#ddd;border-color:rgba(0,0,0,.15)}
 .well-lg{padding:24px;border-radius:6px}
 .well-sm{padding:9px;border-radius:3px}
-.close{float:right;line-height:1;color:#000;text-shadow:0 1px 0 #fff;opacity:.2;filter:alpha(opacity=20)}
-.popover,.tooltip{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-style:normal;font-weight:400;letter-spacing:normal;line-break:auto;line-height:1.42857143;text-shadow:none;text-transform:none;white-space:normal;word-break:normal;word-spacing:normal;word-wrap:normal;text-decoration:none}
+.close{float:right;font-size:22.5px;line-height:1;color:#000;text-shadow:0 1px 0 #fff;opacity:.2;filter:alpha(opacity=20)}
+.popover,.tooltip{font-family:TexGyroHeros,Helvetica,Arial,sans-serif;font-style:normal;font-weight:400;letter-spacing:normal;line-break:auto;line-height:1.42857143;text-shadow:none;text-transform:none;white-space:normal;word-break:normal;word-spacing:normal;word-wrap:normal;text-decoration:none}
 .close:focus,.close:hover{color:#000;text-decoration:none;cursor:pointer;opacity:.5;filter:alpha(opacity=50)}
 button.close{padding:0;cursor:pointer;background:0 0;border:0;-webkit-appearance:none}
 .modal-content,.popover{background-clip:padding-box}
@@ -1375,6 +1374,7 @@ button.close{padding:0;cursor:pointer;background:0 0;border:0;-webkit-appearance
 .carousel-indicators li{display:inline-block;width:10px;height:10px;margin:1px;text-indent:-999px;border:1px solid #fff;border-radius:10px;cursor:pointer;background-color:#000\9;background-color:rgba(0,0,0,0)}
 .carousel-indicators .active{margin:0;width:12px;height:12px;background-color:#fff}
 .carousel-caption{position:absolute;left:15%;right:15%;bottom:20px;z-index:10;padding-top:20px;padding-bottom:20px}
+.affix,.menu{position:fixed}
 .carousel-caption .btn,.text-hide{text-shadow:none}
 @media screen and (min-width:768px){.carousel-control .glyphicon-chevron-left,.carousel-control .glyphicon-chevron-right,.carousel-control .icon-next,.carousel-control .icon-prev{width:30px;height:30px;margin-top:-10px;font-size:30px}
 .carousel-control .glyphicon-chevron-left,.carousel-control .icon-prev{margin-left:-10px}
@@ -1393,7 +1393,6 @@ button.close{padding:0;cursor:pointer;background:0 0;border:0;-webkit-appearance
 .hidden,.visible-lg,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block,.visible-md,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-sm,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-xs,.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block{display:none!important}
 .invisible{visibility:hidden}
 .text-hide{font:0/0 a;color:transparent;background-color:transparent;border:0}
-.affix{position:fixed}
 @-ms-viewport{width:device-width}
 @media (max-width:767px){.visible-xs{display:block!important}
 table.visible-xs{display:table!important}
@@ -1450,7 +1449,23 @@ td.visible-print,th.visible-print{display:table-cell!important}
 @media print{.visible-print-inline-block{display:inline-block!important}
 .hidden-print{display:none!important}
 }
+ol,ul{padding:0;margin:0}
 ol li,ul li{list-style-type:none}
-.front-page{max-height:863px;background:url(../img/bg.jpg) center center no-repeat #112433;background-size:cover}
-.menu__content{color:#002744}
-.menu__content li{display:inline-block}
+.front-page{background:url(../img/bg.jpg) center top no-repeat #112433;background-size:cover;max-height:863px}
+.menu{top:0;right:0;left:0}
+.menu.scrolled{box-shadow:0 2px 3px rgba(3,13,21,.15);background-color:#f5f5f5}
+.menu__content__list{font-size:0}
+.menu__content__list>li{position:relative;display:inline-block;font:18px 'Century Gothic';text-transform:uppercase}
+.menu__content__list>li:hover .menu__content__list__drop-down{display:block}
+.menu__content__list>li a{display:block;height:53px;line-height:53px;color:#002744}
+.menu__content__list>li:not(:last-of-type):not(:first-of-type) a{padding:0 45.95px}
+.menu__content__list>li:first-of-type a{padding-right:45.95px}
+.menu__content__list__drop-down{display:none;position:absolute;background-color:#002744}
+.menu__content__list__drop-down li a{color:#f5f5f5}
+@media (max-width:1199px){.menu__content li:not(:last-of-type):not(:first-of-type) a{padding:0 27.7px}
+.menu__content li:first-of-type a{padding-right:27.7px}
+}
+@media (max-width:991px){.menu__content li{font-size:15px}
+.menu__content li:not(:last-of-type):not(:first-of-type) a{padding:0 17.1px}
+.menu__content li:first-of-type a{padding-right:17.1px}
+}

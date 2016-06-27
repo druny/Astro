@@ -1,5 +1,7 @@
 ul,
 ol {
+    padding: 0;
+    margin: 0;
     li {
         list-style-type: none;
     }
@@ -11,17 +13,72 @@ body {
 }
 
 .front-page {
+    background: @bg-color url(../img/bg.jpg) no-repeat center top;
+    background-size: cover;
     height: 100%;
     max-height: 863px;
-    background: @bg-color url(../img/bg.jpg) no-repeat center center;
-    background-size: cover;
 }
 
 .menu {
+    &.scrolled {
+        box-shadow: 0 2px 3px rgba(3,13,21,.15);
+        background-color: @nav-bg-color;
+    }
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
     &__content {
-        color: @nav-text-color;
-        li {
-            display: inline-block;
+        &__list {
+            > li {
+                @list-item-padding: 45.95px;
+                position: relative;
+                &:hover {
+                    .menu__content__list__drop-down {
+                        display: block;
+                    }
+                }
+                a {
+                    /* UNDERLINE
+                    &:hover::before {
+                        content: '';
+                        width: 100% - @list-item-padding;
+                        position: absolute;
+                        bottom: 12px;
+                        border-top: 1px solid @nav-hover-item-color;
+                    } 
+                    */
+                    display: block;
+                    //position: relative;
+                    height: @nav-line-height;
+                    line-height: @nav-line-height;
+                    color: @nav-text-color;
+                }
+                &:not(:last-of-type):not(:first-of-type) {
+                    a {
+                        padding: 0 @list-item-padding;
+                    }
+                }
+                &:first-of-type {
+                    a {
+                        padding-right: @list-item-padding;
+                    }
+                }
+                display: inline-block;
+                font: @nav-font-size 'Century Gothic';
+                text-transform: uppercase;
+            }
+            &__drop-down {
+                display: none;
+                position: absolute;
+                background-color: @nav-text-color;
+                li {
+                    a {
+                        color: @nav-bg-color; 
+                    }
+                }
+            }
+            font-size: 0;
         }
     }
 }

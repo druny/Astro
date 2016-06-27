@@ -1,0 +1,40 @@
+@media (max-width: 1199px) {
+    .menu {
+        &__content {
+            li {
+                @list-item-padding: 27.7px;
+                &:not(:last-of-type):not(:first-of-type) {
+                    a {
+                        padding: 0 @list-item-padding;
+                    }
+                }
+                &:first-of-type {
+                    a {
+                        padding-right: @list-item-padding;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .menu {
+        &__content {
+            li {
+                @list-item-padding: 17.1px;
+                font-size: @font-size-base;
+                &:not(:last-of-type):not(:first-of-type) {
+                    a {
+                        padding: 0 @list-item-padding;
+                    }
+                }
+                &:first-of-type {
+                    a {
+                        padding-right: @list-item-padding;
+                    }
+                }
+            }
+        }
+    }
+}
